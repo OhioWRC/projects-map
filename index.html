@@ -77,12 +77,6 @@
 			 +"<br/>" + '<a href= "'+ feature.properties.Link +'"> Project report </a>');
 		}
 
-		//var projects = L.geoJson(projectsData,{
-		//	pointToLayer: projectsLoc,
-		//	onEachFeature: bindPopup
-		//}).addTo(mymap);
-
-
 		var projects06 = L.geoJson(projectsData, {
 			pointToLayer: projectsLoc,
 		  filter: function(feature, layer) {
