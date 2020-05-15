@@ -86,7 +86,7 @@
 		var projects06 = L.geoJson(projectsData, {
 			pointToLayer: projectsLoc,
 		  filter: function(feature, layer) {
-		    return (feature.properties.Year === "2016-2020");
+		    return (feature.properties.Year === "2006-2010");
 		  },
 			onEachFeature: bindPopup
 		}).addTo(mymap);
