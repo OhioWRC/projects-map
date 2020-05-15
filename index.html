@@ -92,14 +92,6 @@
 			},
 			onEachFeature: bindPopup
 		}).addTo(mymap);
-
-		var projects161 = L.geoJson(projectsData, {
-			pointToLayer: projectsLoc,
-		  filter: function(feature, layer) {
-		    return (feature.properties.Year === "2016-2020");
-		  },
-			onEachFeature: bindPopup
-		}).addTo(mymap);
 			
 		var projects16 = L.geoJson(projectsData, {
 			pointToLayer: projectsLoc,
@@ -108,11 +100,20 @@
 		  },
 			onEachFeature: bindPopup
 		}).addTo(mymap);
-
+                
+		//var projects20 = L.geoJson(projectsData, {
+		//	pointToLayer: projectsLoc,
+		//  filter: function(feature, layer) {
+		//    return (feature.properties.Year === "2021-2026");
+		//  },
+		//	onEachFeature: bindPopup
+		//}).addTo(mymap);
+			
 		var overlayMaps = {
+		//"2021 - 2025": projects20,
 		"2016 - 2020": projects16,
 		"2011 - 2015": projects11,
-		"2006 - 2010": projects06,
+		"2006 - 2010": projects06,	
   	};
 	  L.control.layers(null,overlayMaps).addTo(mymap);
 
